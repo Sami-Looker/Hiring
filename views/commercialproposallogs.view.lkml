@@ -9,11 +9,13 @@ view: commercialproposallogs {
   }
 
   dimension: __v {
+    hidden: yes
     type: number
     sql: ${TABLE}."__v" ;;
   }
 
   dimension: _id {
+    hidden: yes
     type: string
     sql: ${TABLE}."_id" ;;
   }
@@ -24,16 +26,19 @@ view: commercialproposallogs {
   }
 
   dimension: analyzedby {
+    hidden: yes
     type: string
     sql: ${TABLE}."analyzedby" ;;
   }
 
   dimension: commercialproposalapproved {
+    hidden: yes
     type: yesno
     sql: ${TABLE}."commercialproposalapproved" ;;
   }
 
   dimension: companyid {
+    hidden: yes
     type: string
     sql: ${TABLE}."companyid" ;;
   }

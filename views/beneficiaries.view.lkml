@@ -39,7 +39,6 @@ view: beneficiaries {
   }
 
   dimension: cpf {
-    hidden: yes
     type: string
     sql: ${TABLE}."cpf" ;;
   }
@@ -101,13 +100,13 @@ view: beneficiaries {
   }
 
   dimension: memberid {
-    hidden: yes
     type: number
     value_format_name: id
     sql: ${TABLE}."memberid" ;;
   }
 
   dimension: mothersname {
+    hidden: yes
     type: string
     sql: ${TABLE}."mothersname" ;;
   }
@@ -141,7 +140,6 @@ view: beneficiaries {
   }
 
   dimension: validationdocument {
-    hidden: yes
     type: string
     sql: ${TABLE}."validationdocument" ;;
   }

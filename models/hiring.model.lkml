@@ -4,6 +4,7 @@ connection: "sami_dw"
 include: "/views/**/*.view"
 
 explore: beneficiaries {
+  label: "Membros"
 
   join: companies {
    type: left_outer
@@ -15,6 +16,18 @@ explore: beneficiaries {
     type: left_outer
     sql_on: ${companyarchivinglogs.companyid} = ${companies._id} ;;
     relationship: many_to_one
+  }
+
+  join: payments {
+    type: left_outer
+    sql_on: ${payments.companyid} = ${companies._id} ;;
+    relationship: one_to_one
+  }
+
+  join: proscores {
+    type: left_outer
+    sql_on: ${proscores.companyid} = ${companies._id} ;;
+    relationship: one_to_one
   }
 
 }

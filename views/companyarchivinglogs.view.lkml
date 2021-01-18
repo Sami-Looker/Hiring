@@ -9,16 +9,19 @@ view: companyarchivinglogs {
   }
 
   dimension: __v {
+    hidden: yes
     type: number
     sql: ${TABLE}."__v" ;;
   }
 
   dimension: _id {
+    hidden: yes
     type: string
     sql: ${TABLE}."_id" ;;
   }
 
   dimension: actualstatus {
+    hidden: yes
     type: string
     sql: ${TABLE}."actualstatus" ;;
   }
@@ -29,21 +32,25 @@ view: companyarchivinglogs {
   }
 
   dimension: companyid {
+    hidden: yes
     type: string
     sql: ${TABLE}."companyid" ;;
   }
 
   dimension: previousstatus {
+    hidden: yes
     type: string
     sql: ${TABLE}."previousstatus" ;;
   }
 
   dimension: updatedat {
+    hidden: yes
     type: string
     sql: ${TABLE}."updatedat" ;;
   }
 
   dimension: updatedby {
+    hidden: yes
     type: string
     sql: ${TABLE}."updatedby" ;;
   }

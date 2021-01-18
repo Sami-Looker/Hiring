@@ -1,5 +1,5 @@
-view: payments {
-  sql_table_name: Hiring.payments ;;
+view: proscores {
+  sql_table_name: hiring.proscores ;;
   drill_fields: [id]
 
   dimension: id {
@@ -27,15 +27,33 @@ view: payments {
     sql: ${TABLE}."companyid" ;;
   }
 
-  dimension: gateway {
+  dimension: level {
+    hidden: yes
     type: string
-    sql: ${TABLE}."gateway" ;;
+    sql: ${TABLE}."level" ;;
   }
 
-  dimension: payment_obj_fk {
+  dimension: score {
+    type: string
+    sql: ${TABLE}."score" ;;
+  }
+
+  dimension: totalcompanyfinancialdebt {
     hidden: yes
     type: number
-    sql: ${TABLE}."paymentObj_fk" ;;
+    sql: ${TABLE}."totalcompanyfinancialdebt" ;;
+  }
+
+  dimension: totalpartnersfinancialdebt {
+    hidden: yes
+    type: number
+    sql: ${TABLE}."totalpartnersfinancialdebt" ;;
+  }
+
+  dimension: updatedat {
+    hidden: yes
+    type: string
+    sql: ${TABLE}."updatedat" ;;
   }
 
   measure: count {
