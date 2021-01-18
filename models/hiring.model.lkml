@@ -30,4 +30,10 @@ explore: beneficiaries {
     relationship: one_to_one
   }
 
+  join: commercialproposallogs {
+    type: left_outer
+    sql_on: ${commercialproposallogs.companyid} = ${companies._id} ;;
+    relationship: one_to_one
+  }
+
 }
