@@ -12,6 +12,12 @@ explore: beneficiaries {
     relationship: many_to_one
     }
 
+  join: plans {
+    type: left_outer
+    sql_on: ${beneficiaries.planid} = ${plans._id} ;;
+    relationship: many_to_one
+  }
+
   join: companyarchivinglogs {
     type: left_outer
     sql_on: ${companyarchivinglogs.companyid} = ${companies._id} ;;
