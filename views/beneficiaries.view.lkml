@@ -100,8 +100,7 @@ view: beneficiaries {
   }
 
   dimension: memberid {
-    type: number
-    value_format_name: id
+    type: string
     sql: ${TABLE}."memberid" ;;
   }
 
