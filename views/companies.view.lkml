@@ -250,7 +250,7 @@ view: companies {
   }
 
   dimension: hirerid {
-    hidden: yes
+    hidden: no
     type: string
     sql: ${TABLE}."hirerid" ;;
   }
