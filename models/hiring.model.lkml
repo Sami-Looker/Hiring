@@ -1,4 +1,4 @@
-connection: "sami_dw"
+connection: "sami_main"
 
 #include all the views
 include: "/views/**/*.view"
