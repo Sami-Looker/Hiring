@@ -161,6 +161,7 @@ view: companies {
   }
 
   dimension: confirmeddocumentsat {
+    hidden: yes
     type: string
     sql: ${TABLE}."confirmeddocumentsat" ;;
   }
