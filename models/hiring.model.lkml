@@ -42,4 +42,22 @@ explore: beneficiaries {
     relationship: one_to_one
   }
 
+  join: deal_pipeline_stage {
+    type: left_outer
+    sql_on: ${deal.deal_pipeline_stage_id} = ${deal_pipeline_stage.stage_id} ;;
+    relationship: one_to_one
+  }
+
+  join: deal {
+    type: full_outer
+    sql_on: ${companies.cnpj} =${deal.property_no_do_cnpj} ;;
+    relationship: one_to_one
+  }
+
+  join: users{
+    type: full_outer
+    sql_on: ${companies.hirerid} =${users._id} ;;
+    relationship: one_to_one
+  }
+
 }

@@ -43,13 +43,13 @@ view: users {
   }
 
   dimension: finishedhiring {
-    hidden: yes
+    hidden: no
     type: yesno
     sql: ${TABLE}."finishedhiring" ;;
   }
 
   dimension: haspaid {
-    hidden: yes
+    hidden: no
     type: yesno
     sql: ${TABLE}."haspaid" ;;
   }
@@ -61,7 +61,7 @@ view: users {
   }
 
   dimension: hiringstep {
-    hidden: yes
+    hidden: no
     type: string
     sql: ${TABLE}."hiringstep" ;;
   }
