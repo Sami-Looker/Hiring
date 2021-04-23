@@ -1,6 +1,5 @@
 connection: "sami_main"
 
-#include all the views
 include: "/views/**/*.view"
 
 explore: beneficiaries {

@@ -141,6 +141,18 @@ view: users {
     sql: ${TABLE}."validmail" ;;
   }
 
+  dimension: effectiveDate {
+    hidden: no
+    type: date
+    sql: ${TABLE}."effectiveDate" ;;
+  }
+
+  dimension: clearingDate {
+    hidden: no
+    type: date
+    sql: ${TABLE}."clearingDate" ;;
+  }
+
   measure: count {
     hidden: yes
     type: count
