@@ -1,5 +1,5 @@
 view: deal {
-  sql_table_name: hubspotg.deal ;;
+  sql_table_name: hubspotgro.deal ;;
   drill_fields: [deal_id]
 
   dimension: deal_id {
