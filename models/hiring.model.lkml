@@ -3,6 +3,7 @@ connection: "sami_main"
 include: "/views/**/*.view"
 
 explore: beneficiaries {
+  hidden: yes
   label: "Membros"
 
   join: companies {
